@@ -3,20 +3,25 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.VBox?>
 
 <!--Specifies the controller file for this fxml file-->
 
-<VBox alignment="CENTER" prefHeight="366.0" prefWidth="185.0" spacing="20.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.johnbr.java_spreadsheet_report.Controller">
+<VBox alignment="CENTER" prefHeight="474.0" prefWidth="250.0" spacing="20.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.johnbr.java_spreadsheet_report.Controller">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
+    <ImageView fitHeight="124.0" fitWidth="208.0">
+        <Image url="@CEC_bg.jpg"/>
+    </ImageView>
    <Label text="Welcome to the app" />
 
 
 <!--    <Label fx:id="login" text="Login"/>-->
     <Label fx:id="buttonForLogin" text="Press to Login" />
-    <Button onAction="#loginButton" text="Login" />
+    <Button onAction="#loginButton" prefHeight="41.0" prefWidth="54.0" text="Login" />
 
 
     <Label fx:id="welcomeText" alignment="CENTER" prefHeight="17.0" prefWidth="144.0" text="Welcome message here" />
