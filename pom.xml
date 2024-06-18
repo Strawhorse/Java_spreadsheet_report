@@ -15,6 +15,14 @@
     </properties>
 
     <dependencies>
+
+        <!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>8.3.0</version>
+        </dependency>
+
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
@@ -61,7 +69,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.johnbr.java_spreadsheet_report/com.johnbr.java_spreadsheet_report.HelloApplication
+                                com.johnbr.java_spreadsheet_report/com.johnbr.java_spreadsheet_report.Main
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
