@@ -14,7 +14,7 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
     <ImageView fitHeight="124.0" fitWidth="208.0">
-        <Image url="@CEC_bg.jpg"/>
+        <Image url="@CEC_bg.jpg" />
     </ImageView>
    <Label text="Welcome to the app" />
 
