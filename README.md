@@ -6,3 +6,7 @@ https://www.youtube.com/watch?v=J0IE5LRyzx8&list=PL9CzlNPNQEQ4YCJkl5_4eTH-f-rvF1
 
 https://openjfx.io/openjfx-docs/
 
+For connecting to database:
+https://www.youtube.com/watch?v=whhSR0wlWQY&list=PL9CzlNPNQEQ4YCJkl5_4eTH-f-rvF1xps&index=6
+
+
