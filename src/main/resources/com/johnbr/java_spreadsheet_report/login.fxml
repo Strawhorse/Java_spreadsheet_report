@@ -19,7 +19,6 @@
    <Label text="Welcome to the app" />
 
 
-<!--    <Label fx:id="login" text="Login"/>-->
     <Label fx:id="buttonForLogin" text="Press to Login" />
     <Button onAction="#loginButton" prefHeight="41.0" prefWidth="54.0" text="Login" />
 
