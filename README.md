@@ -14,5 +14,5 @@ To do:
 - establish database connection and set up MySQL database
 - Create a login scene
 - Create a database connection scene
-- tba
+- 
 - 
