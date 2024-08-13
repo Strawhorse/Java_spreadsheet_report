@@ -14,16 +14,10 @@ public class Main extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("login.fxml"));
 
 
-        Scene scene = new Scene(fxmlLoader.load(), 1000, 800);
-        stage.setTitle("Spreadsheet report generator!");
-        stage.setScene(scene);
+        stage.setTitle("<Enter title here later>");
+        stage.setScene(new Scene(fxmlLoader.load(), 1000, 800));
         stage.show();
     }
-
-
-
-
-
 
 
 //    launch method
