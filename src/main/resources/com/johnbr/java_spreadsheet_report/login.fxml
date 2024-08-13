@@ -11,9 +11,10 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<!--Specifies the controller file for this fxml file-->
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" style="-fx-background-color: #ECECE7;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+
+<!--Specifies the controller file for this fxml file at the end-->
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" style="-fx-background-color: #ECECE7;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.johnbr.java_spreadsheet_report.LoginController">
    <left>
       <AnchorPane prefHeight="200.0" prefWidth="220.0" BorderPane.alignment="CENTER">
          <ImageView fitHeight="407.0" fitWidth="228.0" pickOnBounds="true">

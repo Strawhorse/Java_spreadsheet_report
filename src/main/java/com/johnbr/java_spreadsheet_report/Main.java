@@ -14,7 +14,7 @@ public class Main extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("login.fxml"));
 
 
-        stage.setTitle("<Enter title here later>");
+        stage.setTitle("Cork English College Login");
         stage.setScene(new Scene(fxmlLoader.load()));
         stage.show();
     }
