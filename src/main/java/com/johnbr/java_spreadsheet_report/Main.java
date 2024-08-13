@@ -15,7 +15,7 @@ public class Main extends Application {
 
 
         stage.setTitle("<Enter title here later>");
-        stage.setScene(new Scene(fxmlLoader.load(), 1000, 800));
+        stage.setScene(new Scene(fxmlLoader.load()));
         stage.show();
     }
 

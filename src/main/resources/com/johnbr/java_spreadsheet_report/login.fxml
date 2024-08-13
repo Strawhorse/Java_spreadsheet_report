@@ -13,50 +13,50 @@
 
 <!--Specifies the controller file for this fxml file-->
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" style="-fx-background-color: #ECECE7;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
    <left>
       <AnchorPane prefHeight="200.0" prefWidth="220.0" BorderPane.alignment="CENTER">
          <ImageView fitHeight="407.0" fitWidth="228.0" pickOnBounds="true">
-            <Image url="@CEC_portrait.jpg"/>
+            <Image url="@CEC_portrait.jpg" />
          </ImageView>
       </AnchorPane>
    </left>
    <right>
-      <AnchorPane prefHeight="200.0" prefWidth="332.0" style="-fx-background-color: #F0EAD6;"
-                  BorderPane.alignment="CENTER">
-         <ImageView fitHeight="32.0" fitWidth="46.0" layoutX="130.0" layoutY="49.0" pickOnBounds="true"
-                    preserveRatio="true" AnchorPane.bottomAnchor="319.0" AnchorPane.leftAnchor="130.0"
-                    AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="49.0">
-            <Image url="@Lock.png"/>
+      <AnchorPane prefHeight="200.0" prefWidth="332.0" style="-fx-background-color: #F0EAD6;" BorderPane.alignment="CENTER">
+         <ImageView fitHeight="32.0" fitWidth="46.0" layoutX="130.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="319.0" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="49.0">
+            <Image url="@Lock.png" />
          </ImageView>
          <Label layoutX="14.0" layoutY="130.0" text="Username">
             <font>
-               <Font size="13.0"/>
+               <Font size="13.0" />
             </font>
          </Label>
-         <TextField layoutX="88.0" layoutY="127.0" prefHeight="25.0" prefWidth="170.0">
+         <TextField fx:id="usernameTextField" layoutX="88.0" layoutY="127.0" prefHeight="25.0" prefWidth="170.0" promptText="username">
             <effect>
-               <Blend/>
+               <Blend />
             </effect>
          </TextField>
          <Label layoutX="16.0" layoutY="179.0" text="Password">
             <font>
-               <Font size="13.0"/>
+               <Font size="13.0" />
             </font>
          </Label>
-         <PasswordField layoutX="88.0" layoutY="176.0" prefHeight="25.0" prefWidth="170.0"/>
-         <Button layoutX="41.0" layoutY="238.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="199.0"
-                 style="-fx-background-color: #E96151;" text="Login" textFill="WHITE">
+         <PasswordField fx:id="enterPasswordField" layoutX="88.0" layoutY="176.0" prefHeight="25.0" prefWidth="170.0" promptText="password" />
+         <Button fx:id="loginButton" layoutX="41.0" layoutY="246.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #E96151;" text="Login" textFill="WHITE">
             <font>
-               <Font size="13.0"/>
+               <Font size="13.0" />
             </font>
          </Button>
-         <Button layoutX="41.0" layoutY="295.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="199.0"
-                 style="-fx-background-color: #E96151;" text="Cancel" textFill="WHITE">
+         <Button fx:id="cancelButton" layoutX="41.0" layoutY="295.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #E96151;" text="Cancel" textFill="WHITE">
             <font>
-               <Font size="13.0"/>
+               <Font size="13.0" />
             </font>
          </Button>
+         <Label alignment="CENTER" layoutX="9.0" layoutY="214.0" prefHeight="17.0" prefWidth="275.0" text="Invalid login. Please try again!" textAlignment="CENTER" textFill="#f80808">
+            <font>
+               <Font size="13.0" />
+            </font>
+         </Label>
       </AnchorPane>
    </right>
 </BorderPane>
