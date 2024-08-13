@@ -11,8 +11,10 @@ https://www.youtube.com/watch?v=whhSR0wlWQY&list=PL9CzlNPNQEQ4YCJkl5_4eTH-f-rvF1
 
 
 To do:
-- establish database connection and set up MySQL database
+
 - Create a login scene
+- Create account registration scene
+- Link both
 - Create a database connection scene
 - 
 - 
