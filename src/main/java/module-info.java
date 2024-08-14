@@ -1,4 +1,5 @@
 module com.johnbr.java_spreadsheet_report {
+
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.graphics;
@@ -6,6 +7,6 @@ module com.johnbr.java_spreadsheet_report {
     requires java.sql;
 
 
-    opens com.johnbr.java_spreadsheet_report to javafx.fxml;
+    opens com.johnbr.java_spreadsheet_report;
     exports com.johnbr.java_spreadsheet_report;
 }

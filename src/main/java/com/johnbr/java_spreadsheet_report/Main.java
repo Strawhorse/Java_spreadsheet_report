@@ -4,19 +4,24 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
 import java.io.IOException;
 
 
 
 public class Main extends Application {
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage primaryStage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("login.fxml"));
 
 
-        stage.setTitle("Cork English College Login");
-        stage.setScene(new Scene(fxmlLoader.load()));
-        stage.show();
+//        primaryStage.setTitle("Cork English College Login");
+        primaryStage.initStyle(StageStyle.UNDECORATED);
+
+
+        primaryStage.setScene(new Scene(fxmlLoader.load()));
+        primaryStage.show();
     }
 
 
