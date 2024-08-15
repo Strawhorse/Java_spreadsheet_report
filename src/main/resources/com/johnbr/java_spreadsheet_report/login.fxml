@@ -15,7 +15,7 @@
 
 
 <!--Specifies the controller file for this fxml file at the end-->
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" style="-fx-background-color: #ECECE7;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.johnbr.java_spreadsheet_report.LoginController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" style="-fx-background-color: #ECECE7;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.johnbr.java_spreadsheet_report.LoginController">
    <left>
       <AnchorPane prefHeight="200.0" prefWidth="220.0" BorderPane.alignment="CENTER">
          <ImageView fitHeight="407.0" fitWidth="228.0" pickOnBounds="true">
@@ -54,7 +54,7 @@
                <Font size="13.0" />
             </font>
          </Button>
-         <Label alignment="CENTER" layoutX="9.0" layoutY="214.0" prefHeight="17.0" prefWidth="275.0" text="Invalid login. Please try again!" textAlignment="CENTER" textFill="#f80808">
+         <Label alignment="CENTER" layoutX="9.0" layoutY="214.0" prefHeight="17.0" prefWidth="275.0" fx:id="loginMessageLabel" textAlignment="CENTER" textFill="#f80808">
             <font>
                <Font size="13.0" />
             </font>
