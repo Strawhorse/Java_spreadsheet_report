@@ -38,14 +38,18 @@ public class LoginController {
 
 //        create loop to check that both sets of user credentials were entered
         if (!usernameTextField.getText().isBlank() && !enterPasswordField.getText().isBlank()) {
-            loginMessageLabel.setText("Login attempted");
             validateLogin();
         } else {
             loginMessageLabel.setText("Incorrect or empty login details entered");
+            usernameTextField.setText("");
+            enterPasswordField.setText("");
         }
     }
 
     public void validateLogin() {
+
+//                    loginMessageLabel.setText("Login attempted");
+
 
     }
 
