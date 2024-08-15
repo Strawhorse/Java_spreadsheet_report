@@ -35,13 +35,13 @@ public class LoginController {
     }
 
     public void loginButtonOnAction(ActionEvent event) {
-        loginMessageLabel.setText("Login attempted");
 
 //        create loop to check that both sets of user credentials were entered
-        if (usernameTextField.getText().isEmpty()) {
-            loginMessageLabel.setText("You have not entered all the login information");
-        } else if (enterPasswordField.getText().isEmpty()) {
-            loginMessageLabel.setText("You have not entered all the login information");
+        if (!usernameTextField.getText().isBlank() && !enterPasswordField.getText().isBlank()) {
+            loginMessageLabel.setText("Login attempted");
+            validateLogin();
+        } else {
+            loginMessageLabel.setText("Incorrect or empty login details entered");
         }
     }
 
