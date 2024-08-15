@@ -17,6 +17,7 @@ public class Main extends Application {
 
 
 //        primaryStage.setTitle("Cork English College Login");
+//        no band label at the top
         primaryStage.initStyle(StageStyle.UNDECORATED);
 
 

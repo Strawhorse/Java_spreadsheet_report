@@ -23,10 +23,11 @@ public class LoginController {
     private TextField usernameTextField;
     @FXML
     private PasswordField enterPasswordField;
-//    methods
 
 
 
+
+    //    methods
 
     public void cancelButtonOnAction(ActionEvent event) {
         Stage stage = (Stage) cancelButton.getScene().getWindow();
@@ -35,6 +36,17 @@ public class LoginController {
 
     public void loginButtonOnAction(ActionEvent event) {
         loginMessageLabel.setText("Login attempted");
+
+//        create loop to check that both sets of user credentials were entered
+        if (usernameTextField.getText().isEmpty()) {
+            loginMessageLabel.setText("You have not entered all the login information");
+        } else if (enterPasswordField.getText().isEmpty()) {
+            loginMessageLabel.setText("You have not entered all the login information");
+        }
+    }
+
+    public void validateLogin() {
+
     }
 
 
