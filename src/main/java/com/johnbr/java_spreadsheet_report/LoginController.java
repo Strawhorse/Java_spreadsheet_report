@@ -1,5 +1,6 @@
 package com.johnbr.java_spreadsheet_report;
 
+import com.mysql.cj.xdevapi.Result;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -9,6 +10,10 @@ import javafx.stage.Stage;
 import javafx.scene.control.Button;
 import javafx.event.ActionEvent;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 
 
@@ -38,7 +43,11 @@ public class LoginController {
 
 //        create loop to check that both sets of user credentials were entered
         if (!usernameTextField.getText().isBlank() && !enterPasswordField.getText().isBlank()) {
-            validateLogin();
+            try {
+                validateLogin();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
         } else {
             loginMessageLabel.setText("Incorrect or empty login details entered");
             usernameTextField.setText("");
@@ -47,9 +56,24 @@ public class LoginController {
     }
 
 
-    public void validateLogin() {
+//method to validate login against username/password in database
+    public void validateLogin() throws SQLException {
 
-//                    loginMessageLabel.setText("Login attempted");
+        DatabaseConnection connection = new DatabaseConnection();
+        Connection connectToDB = connection.getConnection();
+
+        String verifyLoginDetails = "SELECT count(1) from user_account WHERE username = '" + usernameTextField.getText() + "' AND password = '" + enterPasswordField.getText() + "';";
+
+        Statement statement = connectToDB.createStatement();
+        ResultSet queryResult = statement.executeQuery(verifyLoginDetails);
+
+        while(queryResult.next()){
+            if(queryResult.getInt(1) == 1) {
+                loginMessageLabel.setText("Login Successful!");
+            } else{
+                loginMessageLabel.setText("Login details incorrect. Please try again.");
+            }
+        }
 
     }
 
