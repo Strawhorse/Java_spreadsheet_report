@@ -46,10 +46,10 @@ public class LoginController {
         }
     }
 
+
     public void validateLogin() {
 
 //                    loginMessageLabel.setText("Login attempted");
-
 
     }
 
