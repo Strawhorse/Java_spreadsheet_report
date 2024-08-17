@@ -16,11 +16,13 @@ public class Main extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("login.fxml"));
 
 
+
+
+
+
 //        primaryStage.setTitle("Cork English College Login");
 //        no band label at the top
         primaryStage.initStyle(StageStyle.UNDECORATED);
-
-
         primaryStage.setScene(new Scene(fxmlLoader.load()));
         primaryStage.show();
     }
