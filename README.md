@@ -31,9 +31,10 @@ Registration screen:
 
 To do:
 
-- Create a login scene
-- Create account registration scene
-- Link both
-- Create a database connection scene
+- Create a login scene (DONE)
+- Create account registration scene (DONE)
+- Link both (DONE)
+- Create a database connection scene (DONE)
+- Create Login and Registration SQL scripts (DONE)
 - 
 - 

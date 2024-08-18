@@ -7,10 +7,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+
+import java.sql.*;
 
 
 public class RegisterController {
@@ -39,7 +37,6 @@ public class RegisterController {
     public void registerButtonOnAction(ActionEvent event) throws SQLException {
         if (setPasswordField.getText().equals(confirmPasswordField.getText())) {
             confirmPasswordLabel.setText("");
-            registrationLabel.setText("User registration complete!");
             registerUser();
         } else {
             confirmPasswordLabel.setText("Passwords do not match. Try again.");
@@ -62,16 +59,24 @@ public class RegisterController {
         DatabaseConnection registerConnection = new DatabaseConnection();
         Connection connectToRegister = registerConnection.getConnection();
 
-        String firstName = FirstnameTextField.getText();
-        String lastName = lastnameTextField.getText();
-        String userName = usernameTextField.getText();
-        String password = setPasswordField.getText();
+        String firstNameText = FirstnameTextField.getText();
+        String lastNameText = lastnameTextField.getText();
+        String userNameText = usernameTextField.getText();
+        String passwordInsertText = setPasswordField.getText();
 
-        String verifyLoginDetails = "INSERT INTO user_account (firstname, lastname, username, password) values (" + firstName + ", " + lastName + "," + userName + "," + password + ");";
+        String verifyLoginDetails = "insert into user_account (firstname, lastname, username, password) values (?,?,?,?);";
+        PreparedStatement pstmt = connectToRegister.prepareStatement(verifyLoginDetails);
+        pstmt.setString(1, firstNameText);
+        pstmt.setString(2, lastNameText);
+        pstmt.setString(3, userNameText);
+        pstmt.setString(4, passwordInsertText);
 
-        Statement statement = connectToRegister.createStatement();
-        statement.executeUpdate(verifyLoginDetails);
-        
+        pstmt.executeUpdate(verifyLoginDetails);
+        System.out.println("Executing query: " + pstmt.toString());
+        registrationLabel.setText("User registration complete! Login now.");
+
+
+
 
     }
 
