@@ -27,8 +27,6 @@ public class LoginController {
     @FXML
     private Button cancelButton;
     @FXML
-    private Button registerButton;
-    @FXML
     private Label loginMessageLabel;
     @FXML
     private TextField usernameTextField;
