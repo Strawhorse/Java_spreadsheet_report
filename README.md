@@ -19,6 +19,7 @@ https://docs.oracle.com/javase/tutorial/uiswing/events/documentlistener.html
 Fixed problem with swapping between Stages, as the registration form was using Password entry fields instead of actual text entry fields:
 https://stackoverflow.com/questions/25967559/starting-off-with-javafx-can-not-set-javafx-scene-control-label-field-applicat
 
+Big thanks, too, to ChatGPT!
 
 Login screen:
 

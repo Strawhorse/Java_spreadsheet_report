@@ -64,17 +64,18 @@ public class RegisterController {
         String userNameText = usernameTextField.getText();
         String passwordInsertText = setPasswordField.getText();
 
-        String verifyLoginDetails = "insert into user_account (firstname, lastname, username, password) values (?,?,?,?);";
+        String verifyLoginDetails = "insert into user_account (firstname, lastname, username, password)values(?,?,?,?)";
         PreparedStatement pstmt = connectToRegister.prepareStatement(verifyLoginDetails);
         pstmt.setString(1, firstNameText);
         pstmt.setString(2, lastNameText);
         pstmt.setString(3, userNameText);
         pstmt.setString(4, passwordInsertText);
 
-        pstmt.executeUpdate(verifyLoginDetails);
+        pstmt.executeUpdate();
         System.out.println("Executing query: " + pstmt.toString());
         registrationLabel.setText("User registration complete! Login now.");
 
+        connectToRegister.close();
 
 
 
