@@ -36,7 +36,7 @@ public class RegisterController {
 
 
 
-    public void registerButtonOnAction(ActionEvent event) {
+    public void registerButtonOnAction(ActionEvent event) throws SQLException {
         if (setPasswordField.getText().equals(confirmPasswordField.getText())) {
             confirmPasswordLabel.setText("");
             registrationLabel.setText("User registration complete!");
@@ -70,7 +70,7 @@ public class RegisterController {
         String verifyLoginDetails = "INSERT INTO user_account (firstname, lastname, username, password) values (" + firstName + ", " + lastName + "," + userName + "," + password + ");";
 
         Statement statement = connectToRegister.createStatement();
-        ResultSet queryResult = statement.executeQuery(verifyLoginDetails);
+        statement.executeUpdate(verifyLoginDetails);
         
 
     }
