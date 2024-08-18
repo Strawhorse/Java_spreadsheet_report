@@ -12,7 +12,7 @@
    <children>
       <AnchorPane prefHeight="82.0" prefWidth="520.0" style="-fx-background-color: #E96151;">
          <children>
-            <ImageView fitHeight="42.0" fitWidth="69.0" layoutX="32.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="logoImageView" fitHeight="42.0" fitWidth="69.0" layoutX="32.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Mini_logo.jpg" />
                </image>
@@ -28,37 +28,37 @@
             <Font size="13.0" />
          </font>
       </Label>
-      <TextField layoutX="92.0" layoutY="119.0" prefHeight="25.0" prefWidth="336.0" />
+      <TextField fx:id="FirstnameTextField" layoutX="92.0" layoutY="119.0" prefHeight="25.0" prefWidth="336.0" promptText="Enter first name here ..." />
       <Label layoutX="92.0" layoutY="152.0" prefHeight="31.0" prefWidth="81.0" text="Last Name">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <TextField layoutX="92.0" layoutY="183.0" prefHeight="25.0" prefWidth="336.0" />
+      <TextField fx:id="lastnameTextField" layoutX="92.0" layoutY="183.0" prefHeight="25.0" prefWidth="336.0" promptText="Enter last name here ..." />
       <Label layoutX="92.0" layoutY="221.0" prefHeight="31.0" prefWidth="81.0" text="Username">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <TextField layoutX="92.0" layoutY="253.0" prefHeight="25.0" prefWidth="336.0" />
+      <TextField fx:id="usernameTextField" layoutX="92.0" layoutY="253.0" prefHeight="25.0" prefWidth="336.0" promptText="Username here ..." />
       <Label layoutX="92.0" layoutY="287.0" prefHeight="31.0" prefWidth="81.0" text="Password">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <TextField layoutX="92.0" layoutY="318.0" prefHeight="25.0" prefWidth="336.0" />
+      <TextField fx:id="setPasswordField" layoutX="92.0" layoutY="318.0" prefHeight="25.0" prefWidth="336.0" promptText="Enter password here ..." />
       <Label layoutX="92.0" layoutY="348.0" prefHeight="31.0" prefWidth="124.0" text="Confirm password">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <TextField layoutX="92.0" layoutY="379.0" prefHeight="25.0" prefWidth="336.0" />
-      <Button layoutX="92.0" layoutY="426.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #E96151;" text="Register" textAlignment="CENTER" textFill="WHITE">
+      <TextField fx:id="confirmPasswordField" layoutX="92.0" layoutY="379.0" prefHeight="25.0" prefWidth="336.0" promptText="Confirm password here ..." />
+      <Button fx:id="registerButton" layoutX="92.0" layoutY="426.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #E96151;" text="Register" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="13.0" />
          </font>
       </Button>
-      <Button layoutX="279.0" layoutY="426.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #E96151;" text="Close" textFill="WHITE">
+      <Button fx:id="closeButton" layoutX="279.0" layoutY="426.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #E96151;" text="Close" textFill="WHITE">
          <font>
             <Font size="13.0" />
          </font>
