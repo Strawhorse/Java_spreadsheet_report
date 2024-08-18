@@ -53,17 +53,12 @@
          </font>
       </Label>
       <TextField fx:id="confirmPasswordField" layoutX="92.0" layoutY="378.0" prefHeight="25.0" prefWidth="336.0" promptText="Confirm password here ..." />
-      <Button fx:id="registerButton" layoutX="92.0" layoutY="426.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="91.0" style="-fx-background-color: #E96151;" text="Register" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="registerButton" layoutX="92.0" layoutY="426.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="155.0" style="-fx-background-color: #E96151;" text="Register" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="13.0" />
          </font>
       </Button>
-      <Button fx:id="closeButton" layoutX="337.0" layoutY="426.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="91.0" style="-fx-background-color: #E96151;" text="Close" textFill="WHITE">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Button>
-      <Button fx:id="loginButton" layoutX="215.0" layoutY="426.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="91.0" style="-fx-background-color: #E96151;" text="Login" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="closeButton" layoutX="272.0" layoutY="426.0" mnemonicParsing="false" onAction="#closeButtonOnAction" prefHeight="27.0" prefWidth="155.0" style="-fx-background-color: #E96151;" text="Close" textFill="WHITE">
          <font>
             <Font size="13.0" />
          </font>

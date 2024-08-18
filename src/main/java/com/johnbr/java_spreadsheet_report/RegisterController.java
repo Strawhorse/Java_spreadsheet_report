@@ -20,8 +20,6 @@ public class RegisterController {
     @FXML
     private Button closeButton;
     @FXML
-    private Button loginButton;
-    @FXML
     private TextField FirstnameTextField;
     @FXML
     private TextField lastnameTextField;
@@ -33,26 +31,14 @@ public class RegisterController {
     private TextField confirmPasswordField;
 
 
+
+
 //    methods
 
-    public void cancelButtonOnAction(ActionEvent event) {
+    public void closeButtonOnAction(ActionEvent event) {
         Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();
     }
-
-
-
-
-    public void loginForm(ActionEvent event) throws IOException {
-
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("login.fxml")));
-        Stage loginstage = (Stage) loginButton.getScene().getWindow();
-        loginstage.initStyle(StageStyle.UNDECORATED);
-        loginstage.setScene(new Scene(root, 520, 400));
-        loginstage.show();
-    }
-
-
 
 
 
