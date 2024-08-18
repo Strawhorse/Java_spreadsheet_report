@@ -11,7 +11,6 @@ import javafx.stage.Stage;
 import javafx.scene.control.Button;
 import javafx.event.ActionEvent;
 import javafx.stage.StageStyle;
-
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
