@@ -17,7 +17,9 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Objects;
 
+import static javafx.fxml.FXMLLoader.*;
 
 
 public class LoginController {
@@ -44,7 +46,7 @@ public class LoginController {
         if (!usernameTextField.getText().isBlank() && !enterPasswordField.getText().isBlank()) {
             try {
                 validateLogin();
-            } catch (SQLException e) {
+            } catch (SQLException | IOException e) {
                 throw new RuntimeException(e);
             }
         } else {
@@ -69,9 +71,9 @@ public class LoginController {
         while(queryResult.next()){
             if(queryResult.getInt(1) == 1) {
                 loginMessageLabel.setText("Login Successful!");
+//                createAccountForm();
             } else{
-//                loginMessageLabel.setText("Login details incorrect. Please try again.");
-                createAccountForm();
+                loginMessageLabel.setText("Login details incorrect. Please try again.");
             }
         }
 
@@ -80,10 +82,10 @@ public class LoginController {
 //    method to swap over to registration form
     public void createAccountForm() throws IOException {
 
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("register.fxml")));
         Stage registerstage = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Register.fxml"));
         registerstage.initStyle(StageStyle.UNDECORATED);
-        registerstage.setScene(new Scene(fxmlLoader.load()));
+        registerstage.setScene(new Scene(root, 520, 474));
         registerstage.show();
     }
 

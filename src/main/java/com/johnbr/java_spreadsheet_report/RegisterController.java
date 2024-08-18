@@ -6,7 +6,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import java.sql.SQLException;
 
 
 public class RegisterController {
@@ -22,9 +21,9 @@ public class RegisterController {
     @FXML
     private TextField usernameTextField;
     @FXML
-    private PasswordField setPasswordField;
+    private TextField setPasswordField;
     @FXML
-    private PasswordField confirmPasswordField;
+    private TextField confirmPasswordField;
 
 
 //    methods

@@ -2,28 +2,22 @@ package com.johnbr.java_spreadsheet_report;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
-
+import java.util.Objects;
 
 
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("login.fxml"));
 
-
-
-
-
-
-//        primaryStage.setTitle("Cork English College Login");
-//        no band label at the top
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("login.fxml")));
         primaryStage.initStyle(StageStyle.UNDECORATED);
-        primaryStage.setScene(new Scene(fxmlLoader.load()));
+        primaryStage.setScene(new Scene(root, 520, 400));
         primaryStage.show();
     }
 
