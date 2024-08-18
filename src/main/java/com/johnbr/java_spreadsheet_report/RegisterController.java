@@ -1,5 +1,6 @@
 package com.johnbr.java_spreadsheet_report;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -38,26 +39,29 @@ public class RegisterController {
 
 
     public void registerButtonOnAction(ActionEvent event) {
-        registrationLabel.setText("Registered successfully!");
-        registerUser();
+        if (setPasswordField.getText().equals(confirmPasswordField.getText())) {
+            confirmPasswordLabel.setText("");
+            registrationLabel.setText("User registration complete!");
+            registerUser();
+        } else {
+            confirmPasswordLabel.setText("Passwords do not match. Try again.");
+            setPasswordField.setText("");
+            confirmPasswordField.setText("");
+        }
     }
 
 
     public void closeButtonOnAction(ActionEvent event) {
         Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();
+        Platform.exit();
     }
 
 
+//    main method for registering users
     public void registerUser(){
 
-        if (setPasswordField.getText().equals(confirmPasswordField.getText())) {
-            confirmPasswordLabel.setText("Passwords match. Registration details correct.");
-        } else {
-            confirmPasswordLabel.setText("Passwords do not match.");
-            setPasswordField.setText("");
-            confirmPasswordField.setText("");
-        }
+
 
     }
 
