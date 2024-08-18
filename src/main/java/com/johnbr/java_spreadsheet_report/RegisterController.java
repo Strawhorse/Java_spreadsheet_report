@@ -3,10 +3,11 @@ package com.johnbr.java_spreadsheet_report;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
+import java.sql.SQLException;
 
 
 public class RegisterController {
@@ -34,7 +35,9 @@ public class RegisterController {
         stage.close();
     }
 
+
     
+
 
 
 }
