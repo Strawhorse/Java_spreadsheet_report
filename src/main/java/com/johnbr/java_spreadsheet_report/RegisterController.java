@@ -8,7 +8,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import java.sql.Connection;
-
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 
 public class RegisterController {
@@ -55,7 +57,7 @@ public class RegisterController {
 
 
 //    main method for registering users
-    public void registerUser(){
+    public void registerUser() throws SQLException {
 
         DatabaseConnection registerConnection = new DatabaseConnection();
         Connection connectToRegister = registerConnection.getConnection();
@@ -65,6 +67,10 @@ public class RegisterController {
         String userName = usernameTextField.getText();
         String password = setPasswordField.getText();
 
+        String verifyLoginDetails = "INSERT INTO user_account (firstname, lastname, username, password) values (" + firstName + ", " + lastName + "," + userName + "," + password + ");";
+
+        Statement statement = connectToRegister.createStatement();
+        ResultSet queryResult = statement.executeQuery(verifyLoginDetails);
         
 
     }
