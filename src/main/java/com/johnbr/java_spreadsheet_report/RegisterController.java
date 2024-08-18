@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -29,17 +30,36 @@ public class RegisterController {
     private TextField setPasswordField;
     @FXML
     private TextField confirmPasswordField;
+    @FXML
+    private Label registrationLabel;
+    @FXML
+    private Label confirmPasswordLabel;
 
 
 
+    public void registerButtonOnAction(ActionEvent event) {
+        registrationLabel.setText("Registered successfully!");
+        registerUser();
+    }
 
-//    methods
 
     public void closeButtonOnAction(ActionEvent event) {
         Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();
     }
 
+
+    public void registerUser(){
+
+        if (setPasswordField.getText().equals(confirmPasswordField.getText())) {
+            confirmPasswordLabel.setText("Passwords match. Registration details correct.");
+        } else {
+            confirmPasswordLabel.setText("Passwords do not match.");
+            setPasswordField.setText("");
+            confirmPasswordField.setText("");
+        }
+
+    }
 
 
 }
