@@ -19,9 +19,12 @@ https://docs.oracle.com/javase/tutorial/uiswing/events/documentlistener.html
 Fixed problem with swapping between Stages, as the registration form was using Password entry fields instead of actual text entry fields:
 https://stackoverflow.com/questions/25967559/starting-off-with-javafx-can-not-set-javafx-scene-control-label-field-applicat
 
+
+Login screen:
 ![image](https://github.com/user-attachments/assets/c188784a-68f4-4137-80a5-da7fe3a7e809)
 
-
+Registration screen:
+![img.png](img.png)
 
 
 To do:
