@@ -73,6 +73,12 @@ public class LoginController {
 
     }
 
+//    method to swap over to registration form
+    public void createAccountForm() {
+
+
+
+    }
 
 
 }
